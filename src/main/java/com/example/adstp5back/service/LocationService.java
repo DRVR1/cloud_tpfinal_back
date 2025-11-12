@@ -18,7 +18,7 @@ public class LocationService {
 
     public Location getDefault() {
         Location location = new Location();
-        location.setTitle("Obelisco (Ubicacion de prueba)");
+        location.setTitle("Bariloche (Ubicacion de prueba)");
         location.setId(0);
         // bariloche -41.132868, -71.309051
         location.setLatitude(-41.132868);

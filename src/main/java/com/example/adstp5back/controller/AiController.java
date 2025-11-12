@@ -38,7 +38,7 @@ public class AiController {
             // Usamos un modelo gratuito
             Message userMessage = new Message("user", prompt);
             ChatRequest requestBody = new ChatRequest(
-                    "mistralai/mistral-7b-instruct", // Modelo gratis
+                    "deepseek/deepseek-chat-v3.1:free", // Modelo gratis
                     List.of(userMessage));
 
             // 5. Crear la Entidad HTTP

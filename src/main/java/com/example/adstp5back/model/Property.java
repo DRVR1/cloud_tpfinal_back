@@ -35,7 +35,11 @@ public class Property {
     private int bedrooms;
     private int bathrooms;
 
+    private String mapsLink;
+
     @ManyToOne
     private Location location;
+
+    private String address;
 
 }
