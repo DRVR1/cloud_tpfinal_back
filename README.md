@@ -1,8 +1,8 @@
 # Titulo
-TP5 ADS Backend
+TP Cloud Backend
 
 ## Descripción
-Backend del TP5 de Administración de Sistemas (4to año) 2025
+Backend del TP de Cloud (4to año) 2025
 
 # Debug / Production
 - Modificar en application.properties segun la necesidad:

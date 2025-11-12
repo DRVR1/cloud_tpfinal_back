@@ -1,12 +1,14 @@
 package com.example.adstp5back.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.example.adstp5back.jwt.JwtService;
 import com.example.adstp5back.service.UserService;
 import com.example.adstp5back.model.AppUser;
 
 import jakarta.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 // http://localhost:8080/swagger-ui/index.html
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 public class UserController {
 
@@ -27,6 +30,11 @@ public class UserController {
     @GetMapping("/")
     public String greet(HttpServletRequest request) {
         return "Hello world! ";
+    }
+
+    @GetMapping("/users")
+    public List<AppUser> getAllUsers() {
+        return userService.findAll();
     }
 
     @PostMapping("/register")

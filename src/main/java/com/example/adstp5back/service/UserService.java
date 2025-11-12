@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.adstp5back.model.AppUser;
 import com.example.adstp5back.repository.UserRepository;
+import java.util.List;
 
 @Service
 public class UserService {
@@ -24,5 +25,7 @@ public class UserService {
 
         return repository.save(newUser);
     }
-
+    public List<AppUser> findAll() {
+        return repository.findAll();
+    }
 }
