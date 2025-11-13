@@ -16,7 +16,7 @@ Cuando esta en modo dev, usa la DB en memoria h2, por lo que no hay que preocupa
 ## Compilar para producción
 - Posicionarse en la carpeta raíz
 ```bash
-sudo docker build -t backend .
+sudo docker build -t ianvid/cloudback:latest .
 ```
 
 <img width="1920" height="1080" alt="Screenshot from 2025-08-22 21-03-22" src="https://github.com/user-attachments/assets/03a30956-f60f-4e7d-902c-dc45cf189750" />
