@@ -28,12 +28,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
-                .cors(Customizer.withDefaults())   
+                .cors(Customizer.withDefaults())
                 .csrf(customizer -> customizer.disable())
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/register").permitAll()
-                        .requestMatchers("/login").permitAll()
                         .requestMatchers("/swagger-ui/**").permitAll()
                         .requestMatchers("/v3/api-docs/**").permitAll()
                         .requestMatchers("/api/**").permitAll()
