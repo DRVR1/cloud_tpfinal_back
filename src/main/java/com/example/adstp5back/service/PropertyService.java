@@ -58,7 +58,7 @@ public class PropertyService {
                 repository.save(new Property(0, "Casa en la playa",
                                 "Se presenta una interesante oportunidad de adquirir una espléndida propiedad ubicada en una zona privilegiada de Marbella. Se trata de una amplia casa aislada, con su propia parcela independiente, situada en el casco histórico de la ciudad. La parcela cuenta con una extensión de 522 metros cuadrados, proporcionando un espacio adecuado y suficiente para disfrutar de la vida al aire libre, con un bonito jardín que cuenta con una variada vegetación que incluye aguacates y otras especies de plantas.",
                                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bleehalligan.co.uk%2Fmedia%2Ffiler_public_thumbnails%2Ffiler_public%2F79%2Fe7%2F79e7b029-fd2a-4aa0-9a9a-765edd2ab1b9%2Fbeachviewsml.jpg__1920x0_q85_subsampling-2_upscale.jpg&f=1&nofb=1&ipt=3d8cde3c45136d99f0aff997ea06796a5b28e22a1aad58fb856dc167e546c8aa",
-                                (float) 1900000, 35, 2, 1,
+                                (float) 1900000, 400, 4, 2,
                                 "https://www.google.com/maps/place/Puerto+San+Carlos/@-41.1331821,-71.3125252,15z",
                                 location, "4100 Cabrillo Hwy N, Half Moon Bay, CA 94019, United States"));
                 repository.save(new Property(0,
