@@ -18,19 +18,16 @@ import org.springframework.security.core.Authentication;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 // http://localhost:8080/swagger-ui/index.html
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
     UserService userService;
-
-    @GetMapping("/")
-    public String greet(HttpServletRequest request) {
-        return "Hello world! ";
-    }
 
     @GetMapping("/users")
     public List<AppUser> getAllUsers() {
