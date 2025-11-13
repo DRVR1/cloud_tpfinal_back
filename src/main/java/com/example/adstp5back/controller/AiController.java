@@ -18,6 +18,9 @@ public class AiController {
     String API_KEY;
     private static final String API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
+    @Value("${openrouter.model}")
+    String modelString;
+
     @GetMapping("/chat")
     public String askAI(String prompt) {
 
@@ -35,10 +38,11 @@ public class AiController {
             headers.setBearerAuth(API_KEY);
 
             // 4. Crear el Body (usando las clases internas de abajo)
+
             // Usamos un modelo gratuito
             Message userMessage = new Message("user", prompt);
             ChatRequest requestBody = new ChatRequest(
-                    "deepseek/deepseek-chat-v3.1:free", // Modelo gratis
+                    modelString, // Modelo gratis
                     List.of(userMessage));
 
             // 5. Crear la Entidad HTTP
