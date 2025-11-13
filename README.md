@@ -4,6 +4,8 @@ TP Cloud Backend
 ## Descripción
 Backend del TP de Cloud (4to año) 2025
 
+Consiste en una inmobiliaria completa, un crud, login, seguridad de spring security, y asistencia de IA al mirar las propiedades. La IA puede estar limitada ya que utilizamos la version gratis de la api de openrouter.ai
+
 # Debug / Production
 - Modificar en application.properties segun la necesidad:
     `spring.profiles.active=dev`
