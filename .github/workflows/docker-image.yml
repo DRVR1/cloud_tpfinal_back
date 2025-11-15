@@ -1,55 +1,43 @@
 # Nombre del workflow (aparecerá en la pestaña "Actions" de GitHub)
-name: CI/CD Completo: Build, Push y Despliegue SSH
+name: Build and Push Docker Image to Docker Hub
 
 # Define cuándo se debe ejecutar este workflow
 on:
   push:
     branches:
       - main  # Se ejecuta solo en cada push a la rama 'main'
-  # Permite la ejecución manual desde la pestaña Actions
-  workflow_dispatch:
 
 # Define los trabajos (jobs) que se van a ejecutar
 jobs:
-  # =========================================================
-  # TRABAJO 1: BUILD Y PUSH A DOCKER HUB
-  # =========================================================
   build-and-push:
-    name: Build y Push de Imágenes Docker
+    # El tipo de máquina virtual donde se ejecutará
     runs-on: ubuntu-latest
 
+    # Los pasos a seguir
     steps:
-      - name: 📝 Check out repository
+      # 1. Clona tu repositorio
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: 🔑 Log in to Docker Hub
+      # 2. Inicia sesión en Docker Hub
+      - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: 🛠️ Set up Docker Buildx
+      # 3. Configura Docker Buildx (necesario para el paso siguiente)
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      # --- CONSTRUYE Y SUBE IANVID/CLOUDBACK ---
-      - name: 🏗️ Build and push ianvid/cloudback:latest
+      # 4. Construye la imagen y la sube a Docker Hub
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          # ATENCIÓN: Ajusta 'context' y 'file' si tu Dockerfile no está en el directorio raíz o './cloudback'
-          context: ./cloudback
-          file: ./cloudback/Dockerfile
-          push: true
-          tags: ianvid/cloudback:latest
-
-      # --- CONSTRUYE Y SUBE IANVID/CLOUDFRONT ---
-      - name: 🏗️ Build and push ianvid/cloudfront:latest
-        uses: docker/build-push-action@v5
-        with:
-          # ATENCIÓN: Ajusta 'context' y 'file' si tu Dockerfile no está en el directorio raíz o './cloudfront'
-          context: ./cloudfront
-          file: ./cloudfront/Dockerfile
-          push: true
-          tags: ianvid/cloudfront:latest
+          context: .   # Usa el directorio raíz para el contexto de build
+          file: ./Dockerfile  # Apunta al Dockerfile en la raíz
+          push: true   # Indica que SÍ debe subir (push) la imagen
+          tags: ianvid/cloudback:latest # ! CAMBIA ESTO
 
   # =========================================================
   # TRABAJO 2: DESPLIEGUE SSH (SÓLO SI EL PRIMER TRABAJO FUE EXITOSO)
@@ -62,7 +50,7 @@ jobs:
     needs: [build-and-push] 
 
     steps:
-    - name: 🚀 SSH y Ejecución de Comandos de Despliegue
+    - name: SSH y Ejecución de Comandos de Despliegue
       uses: appleboy/ssh-action@v1.0.3
       with:
         # Configuración de Conexión SSH (Secretos de GitHub)
