@@ -29,6 +29,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @GetMapping("/despliegue")
+    public String despliegue() {
+        return "Despliegue continuo";
+    }
+
     @GetMapping("/users")
     public List<AppUser> getAllUsers() {
         return userService.findAll();
