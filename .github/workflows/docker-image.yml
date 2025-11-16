@@ -64,7 +64,6 @@ jobs:
           
           # 1. Pull de las últimas imágenes (ya subidas por el trabajo anterior)
           echo "Haciendo pull de las últimas imágenes de Docker Hub..."
-          sudo docker pull ianvid/cloudfront:latest
           sudo docker pull ianvid/cloudback:latest
           
           # 2. Levantar los servicios con docker compose
