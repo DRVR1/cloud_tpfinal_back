@@ -22,11 +22,11 @@ public class Property {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(length = 600)
+    @Column(length = 6000)
     private String title;
-    @Column(length = 600)
+    @Column(length = 6000)
     private String description;
-    @Column(length = 1500)
+    @Column(length = 13000)
     private String imageUrl;
     private float price;
 
