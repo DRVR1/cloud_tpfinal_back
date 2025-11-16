@@ -55,11 +55,11 @@ public class PropertyService {
 
                 Location location = locationService.getDefault();
 
-                repository.save(new Property(0, "Casa en la playa",
-                                "Se presenta una interesante oportunidad de adquirir una espléndida propiedad ubicada en una zona privilegiada de Marbella. Se trata de una amplia casa aislada, con su propia parcela independiente, situada en el casco histórico de la ciudad. La parcela cuenta con una extensión de 522 metros cuadrados, proporcionando un espacio adecuado y suficiente para disfrutar de la vida al aire libre, con un bonito jardín que cuenta con una variada vegetación que incluye aguacates y otras especies de plantas.",
-                                "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bleehalligan.co.uk%2Fmedia%2Ffiler_public_thumbnails%2Ffiler_public%2F79%2Fe7%2F79e7b029-fd2a-4aa0-9a9a-765edd2ab1b9%2Fbeachviewsml.jpg__1920x0_q85_subsampling-2_upscale.jpg&f=1&nofb=1&ipt=3d8cde3c45136d99f0aff997ea06796a5b28e22a1aad58fb856dc167e546c8aa",
-                                (float) 1900000, 400, 4, 2,
-                                "https://www.google.com/maps/place/Puerto+San+Carlos/@-41.1331821,-71.3125252,15z",
+                repository.save(new Property(0, "Casa Mr. Black en Costa Esmeralda",
+                                "Impactante casa de diseño en tonos negro, blanco y madera implantada en el barrio Senderos 4: con diseño minimalista Casa Mr. Black es una sólida construcción de 300 mts con fondo libre, es un espacio luminoso y pensado al detalle para el más alto confort y relax. Con capacidad para 8 personas, el ingreso a dos aguas diseñado en chapa negra y vidrio destaca al ingresar un espacio social amplio y blanco: el living comedor se integra sutilmente con la cocina completamente equipada, la cual está contenida con aberturas de techo a pared, disfrutándose visualmente de la piscina y el exterior, cuidadosamente parquizado.",
+                                "https://imgar.zonapropcdn.com/avisos/resize/1/00/54/48/62/06/1200x1200/1932735637.jpg",
+                                (float) 450000, 650, 4, 3,
+                                "https://maps.app.goo.gl/YWe1DnHCTXZoxzBM8",
                                 location, "4100 Cabrillo Hwy N, Half Moon Bay, CA 94019, United States"));
                 repository.save(new Property(0,
                                 "Venta Casa a estrenar en Martínez UNICA!",
@@ -67,6 +67,13 @@ public class PropertyService {
                                 "https://d1acdg20u0pmxj.cloudfront.net/listings/4b436282-39dc-4048-b35f-e959b28b38ea/860x440/ae4a8ecb-d107-44b3-aacf-f836e5d47f85.webp",
                                 (float) 990000, 460, 10, 3, "https://maps.app.goo.gl/S9DRr8WLVPCa3w5f7", location,
                                 "Emilio Mitre 1200, Martinez, San Isidro, Buenos Aires"));
+
+                repository.save(new Property(0,
+                                "VENTA PH 2 AMBIENTES VILLA URQUIZA",
+                                "Ofrecemos a la venta PH de 2 ambientes con Patio en Villa Urquiza",
+                                "https://d1acdg20u0pmxj.cloudfront.net/listings/c2879e87-e938-44d4-ba40-a3d6f5224d5e/860x440/bd1caa56-d35e-47b7-aec1-2757273563d7.webp",
+                                (float) 85000, 45, 2, 1, "https://maps.app.goo.gl/qzsm3qdWdF7d4sYK9", location,
+                                "Monroe 5500, Villa Urquiza, Capital Federal"));
                 return true;
         }
 
