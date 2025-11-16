@@ -60,7 +60,7 @@ public class PropertyService {
                                 "https://imgar.zonapropcdn.com/avisos/resize/1/00/54/48/62/06/1200x1200/1932735637.jpg",
                                 (float) 450000, 650, 4, 3,
                                 "https://maps.app.goo.gl/YWe1DnHCTXZoxzBM8",
-                                location, "4100 Cabrillo Hwy N, Half Moon Bay, CA 94019, United States"));
+                                location, "L, Senderos IV, Costa Esmeralda, La pampa, Argentina"));
                 repository.save(new Property(0,
                                 "Venta Casa a estrenar en Martínez UNICA!",
                                 "¡¡Oportunidad!! Excelente propiedad cuenta con una gran luminosidad natural en todos sus ambientes, que penetra a través de los amplios ventanales de seguridad con vidrios dobles (DVH), cuyos marcos son anodizados.",
