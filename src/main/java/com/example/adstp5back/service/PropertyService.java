@@ -56,7 +56,7 @@ public class PropertyService {
                 Location location = locationService.getDefault();
 
                 repository.save(new Property(0, "Casa Mr. Black en Costa Esmeralda",
-                                "Impactante casa de diseño en tonos negro, blanco y madera implantada en el barrio Senderos 4: con diseño minimalista Casa Mr. Black es una sólida construcción de 300 mts con fondo libre, es un espacio luminoso y pensado al detalle para el más alto confort y relax. Con capacidad para 8 personas, el ingreso a dos aguas diseñado en chapa negra y vidrio destaca al ingresar un espacio social amplio y blanco: el living comedor se integra sutilmente con la cocina completamente equipada, la cual está contenida con aberturas de techo a pared, disfrutándose visualmente de la piscina y el exterior, cuidadosamente parquizado.",
+                                "Impactante casa de diseño en tonos negro, blanco y madera implantada en el barrio.",
                                 "https://imgar.zonapropcdn.com/avisos/resize/1/00/54/48/62/06/1200x1200/1932735637.jpg",
                                 (float) 450000, 650, 4, 3,
                                 "https://maps.app.goo.gl/YWe1DnHCTXZoxzBM8",
